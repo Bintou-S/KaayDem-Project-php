@@ -18,10 +18,17 @@
             <strong><?= htmlspecialchars($res->getTrajet()->getVilleDepart()) ?> → <?= htmlspecialchars($res->getTrajet()->getVilleArrivee()) ?></strong><br>
             <small style="color:#666">📅 <?= $res->getTrajet()->getDateHeureDepart()->format('d/m/Y à H\hi') ?></small>
         </div>
-        <span class="badge badge-<?= match($res->getStatut()->value) {
-            'confirmee' => 'success', 'en_attente' => 'warning',
-            'terminee' => 'secondary', default => 'danger'
-        } ?>"><?= $res->getStatut()->libelle() ?></span>
+        <?php
+            $badgeClass = 'danger';
+            if ($res->getStatut()->value === 'confirmee') {
+                $badgeClass = 'success';
+            } elseif ($res->getStatut()->value === 'en_attente') {
+                $badgeClass = 'warning';
+            } elseif ($res->getStatut()->value === 'terminee') {
+                $badgeClass = 'secondary';
+            }
+        ?>
+        <span class="badge badge-<?= $badgeClass ?>"><?= $res->getStatut()->libelle() ?></span>
     </div>
     <div style="display:flex;gap:2rem;margin-bottom:.8rem">
         <span>💺 <?= $res->getNbPlacesReservees() ?> place(s)</span>
