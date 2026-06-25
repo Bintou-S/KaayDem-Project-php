@@ -56,10 +56,15 @@
                 <td><?= htmlspecialchars($res->getPassager()->getNomComplet()) ?></td>
                 <td><?= $res->getNbPlacesReservees() ?></td>
                 <td>
-                    <span class="badge badge-<?= match($res->getStatut()->value) {
-                        'confirmee' => 'success', 'en_attente' => 'warning',
-                        'terminee' => 'secondary', default => 'danger'
-                    } ?>"><?= $res->getStatut()->libelle() ?></span>
+                    <?php
+                    $statusClass = [
+                        'confirmee' => 'success',
+                        'en_attente' => 'warning',
+                        'terminee' => 'secondary',
+                    ];
+                    $badgeClass = $statusClass[$res->getStatut()->value] ?? 'danger';
+                    ?>
+                    <span class="badge badge-<?= $badgeClass ?>"><?= $res->getStatut()->libelle() ?></span>
                 </td>
                 <td style="display:flex;gap:.3rem">
                     <?php if ($res->getStatut()->value === 'en_attente'): ?>
