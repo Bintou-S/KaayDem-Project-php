@@ -60,5 +60,6 @@
        class="btn btn-sm <?= $i == $page ? 'btn-primary' : 'btn-secondary' ?>"><?= $i ?></a>
     <?php endfor; ?>
 </div>
+
 <?php endif; ?>
 <?php endif; ?>

@@ -55,4 +55,5 @@ class StatutReservation
     {
         return $this->value === $other->value;
     }
+    
 }

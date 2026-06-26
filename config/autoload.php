@@ -18,6 +18,7 @@ spl_autoload_register(function (string $class): void {
     }
 });
 
+
 foreach (glob(ROOT_PATH . '/app/Core/*.php') as $file) {
     require_once $file;
 }

@@ -59,5 +59,6 @@
         <a href="/kaaydem75/trajets/<?= $trajet->getId() ?>" class="btn btn-primary btn-sm">Voir</a>
     </div>
 </div>
+
 <?php endforeach; ?>
 <?php endif; ?>

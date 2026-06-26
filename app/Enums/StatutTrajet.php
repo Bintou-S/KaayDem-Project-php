@@ -43,4 +43,5 @@ class StatutTrajet
     {
         return $this->value === $other->value;
     }
+    
 }

@@ -45,4 +45,5 @@ class StatutCompte
     {
         return $this->value === $other->value;
     }
+    
 }

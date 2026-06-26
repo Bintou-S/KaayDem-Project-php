@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'kaaydem');
 define('DB_USER', 'root');

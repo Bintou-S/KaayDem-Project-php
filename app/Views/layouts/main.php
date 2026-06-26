@@ -46,5 +46,6 @@
 </footer>
 
 <script src="/kaaydem75/public/js/app.js"></script>
+
 </body>
 </html>
