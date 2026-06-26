@@ -23,24 +23,32 @@ class StatutReservation
 
     public function libelle(): string
     {
-        return match($this->value) {
-            self::EN_ATTENTE => 'En attente',
-            self::CONFIRMEE  => 'Confirmée',
-            self::TERMINEE   => 'Terminée',
-            self::ANNULEE    => 'Annulée',
-            default          => $this->value,
-        };
+        switch ($this->value) {
+            case self::EN_ATTENTE:
+                return 'En attente';
+            case self::CONFIRMEE:
+                return 'Confirmée';
+            case self::TERMINEE:
+                return 'Terminée';
+            case self::ANNULEE:
+                return 'Annulée';
+            default:
+                return $this->value;
+        }
     }
 
     public function getValue(): string { return $this->value; }
 
     public function peutTransitionnerVers(self $nouveau): bool
     {
-        return match($this->value) {
-            self::EN_ATTENTE => in_array($nouveau->value, [self::CONFIRMEE, self::ANNULEE]),
-            self::CONFIRMEE  => in_array($nouveau->value, [self::TERMINEE, self::ANNULEE]),
-            default          => false,
-        };
+        switch ($this->value) {
+            case self::EN_ATTENTE:
+                return in_array($nouveau->value, [self::CONFIRMEE, self::ANNULEE], true);
+            case self::CONFIRMEE:
+                return in_array($nouveau->value, [self::TERMINEE, self::ANNULEE], true);
+            default:
+                return false;
+        }
     }
 
     public function equals(self $other): bool

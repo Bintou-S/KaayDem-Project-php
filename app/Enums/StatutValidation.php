@@ -23,13 +23,18 @@ class StatutValidation
 
     public function libelle(): string
     {
-        return match($this->value) {
-            self::NON_DEMANDE => 'Non demandé',
-            self::EN_ATTENTE  => 'En attente de validation',
-            self::VALIDE      => 'Validé',
-            self::REFUSE      => 'Refusé',
-            default           => $this->value,
-        };
+        switch ($this->value) {
+            case self::NON_DEMANDE:
+                return 'Non demandé';
+            case self::EN_ATTENTE:
+                return 'En attente de validation';
+            case self::VALIDE:
+                return 'Validé';
+            case self::REFUSE:
+                return 'Refusé';
+            default:
+                return $this->value;
+        }
     }
 
     public function getValue(): string { return $this->value; }

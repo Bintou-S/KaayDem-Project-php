@@ -23,13 +23,18 @@ class StatutTrajet
 
     public function libelle(): string
     {
-        return match($this->value) {
-            self::OUVERT  => 'Ouvert',
-            self::COMPLET => 'Complet',
-            self::CLOTURE => 'Clôturé',
-            self::ANNULE  => 'Annulé',
-            default       => $this->value,
-        };
+        switch ($this->value) {
+            case self::OUVERT:
+                return 'Ouvert';
+            case self::COMPLET:
+                return 'Complet';
+            case self::CLOTURE:
+                return 'Clôturé';
+            case self::ANNULE:
+                return 'Annulé';
+            default:
+                return $this->value;
+        }
     }
 
     public function getValue(): string { return $this->value; }

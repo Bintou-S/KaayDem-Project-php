@@ -1,6 +1,6 @@
 <h1 class="page-title">🚗 Devenir conducteur</h1>
 
-<?php $profil = $membre?->getProfilConducteur(); ?>
+<?php $profil = isset($membre) ? $membre->getProfilConducteur() : null; ?>
 
 <?php if ($profil && $profil->estValide()): ?>
 <div class="card" style="border-left:4px solid #28a745">

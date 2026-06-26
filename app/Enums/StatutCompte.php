@@ -22,12 +22,16 @@ class StatutCompte
 
     public function libelle(): string
     {
-        return match($this->value) {
-            self::EN_ATTENTE => 'En attente',
-            self::ACTIF      => 'Actif',
-            self::SUSPENDU   => 'Suspendu',
-            default          => $this->value,
-        };
+        switch ($this->value) {
+            case self::EN_ATTENTE:
+                return 'En attente';
+            case self::ACTIF:
+                return 'Actif';
+            case self::SUSPENDU:
+                return 'Suspendu';
+            default:
+                return $this->value;
+        }
     }
 
     public function __get(string $name)
