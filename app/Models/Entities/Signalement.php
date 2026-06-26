@@ -46,4 +46,5 @@ class Signalement
     public function setId(int $id): void { $this->id = $id; }
     public function setTraite(bool $t): void { $this->traite = $t; }
     public function setDateSignalement(\DateTime $d): void { $this->dateSignalement = $d; }
+    
 }

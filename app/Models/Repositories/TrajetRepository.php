@@ -162,5 +162,6 @@ class TrajetRepository extends Repository
         $arrets = array_map(fn($a) => new Arret($a['libelle'], (int)$a['ordre'], (int)$a['trajet_id'], (int)$a['id']), $stmtArrets->fetchAll());
         $trajet->setArrets($arrets);
         return $trajet;
+        
     }
 }

@@ -18,6 +18,7 @@ trait Timestampable
         $this->updatedAt = new \DateTime();
         if ($this->createdAt === null) {
             $this->createdAt = new \DateTime();
+            
         }
     }
 }

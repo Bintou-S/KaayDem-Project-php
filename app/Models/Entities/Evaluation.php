@@ -50,4 +50,5 @@ class Evaluation
     public function getDateEvaluation(): \DateTime { return $this->dateEvaluation; }
     public function setId(int $id): void { $this->id = $id; }
     public function setDateEvaluation(\DateTime $date): void { $this->dateEvaluation = $date; }
+    
 }

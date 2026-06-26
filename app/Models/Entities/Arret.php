@@ -25,4 +25,5 @@ class Arret
     public function getTrajetId(): ?int { return $this->trajetId; }
     public function setId(int $id): void { $this->id = $id; }
     public function setTrajetId(int $id): void { $this->trajetId = $id; }
+
 }

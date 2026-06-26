@@ -7,4 +7,5 @@ interface EvaluableInterface
     public function getNoteMoyenne(): float;
     public function getNombreEvaluations(): int;
     public function ajouterEvaluation(int $note): void;
+    
 }

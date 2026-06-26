@@ -76,5 +76,6 @@ public function save($profil): bool
             $profil->setDateValidation(new \DateTime($row['date_validation']));
         }
         return $profil;
+        
     }
 }

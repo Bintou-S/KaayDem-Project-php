@@ -56,5 +56,6 @@ class SignalementRepository extends Repository
         $s->setTraite((bool)$row['traite']);
         $s->setDateSignalement(new \DateTime($row['date_signalement']));
         return $s;
+        
     }
 }

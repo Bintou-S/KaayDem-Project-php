@@ -29,6 +29,6 @@ class Admin extends Utilisateur
 
     public function activerCompte(Utilisateur $utilisateur): void
     {
-        $utilisateur->setStatutCompte(StatutCompte::from(StatutCompte::ACTIF));
+        $utilisateur->setStatutCompte(StatutCompte::from(StatutCompte::ACTIF)); 
     }
 }

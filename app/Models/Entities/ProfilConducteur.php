@@ -63,4 +63,5 @@ class ProfilConducteur
     public function setNoteMoyenne(float $note): void { $this->noteMoyenne = $note; }
     public function setNombreEvaluations(int $n): void { $this->nombreEvaluations = $n; }
     public function setDateValidation(\DateTime $date): void { $this->dateValidation = $date; }
+    
 }

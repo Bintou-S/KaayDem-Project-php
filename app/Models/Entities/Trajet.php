@@ -99,4 +99,5 @@ class Trajet
     public function setNbPlacesDispo(int $nb): void { $this->nbPlacesDispo = $nb; }
     public function setStatut(StatutTrajet $statut): void { $this->statut = $statut; }
     public function setArrets(array $arrets): void { $this->arrets = $arrets; }
+    
 }

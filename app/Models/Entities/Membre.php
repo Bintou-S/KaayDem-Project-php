@@ -111,4 +111,5 @@ class Membre extends Utilisateur implements Conduisable, Reservable, EvaluableIn
     public function setProfilConducteur(?ProfilConducteur $profil): void { $this->profilConducteur = $profil; }
     public function getReservations(): array { return $this->reservations; }
     public function getTrajetsPublies(): array { return $this->trajetsPublies; }
+    
 }

@@ -29,4 +29,5 @@ class HistoriqueTransition
     public function setId(int $id): void { $this->id = $id; }
     public function setReservationId(int $id): void { $this->reservationId = $id; }
     public function setDateTransition(\DateTime $date): void { $this->dateTransition = $date; }
+    
 }

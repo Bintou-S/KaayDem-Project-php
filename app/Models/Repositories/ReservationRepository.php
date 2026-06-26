@@ -206,5 +206,6 @@ public function save($reservation): bool
         $reservation->setHistorique($historique);
 
         return $reservation;
+
     }
 }

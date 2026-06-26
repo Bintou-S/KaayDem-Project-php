@@ -151,5 +151,6 @@ class MembreRepository extends Repository
         $row = $stmt->fetch();
         if (!$row) return null;
         return $this->hydraterAvecProfil($row);
+        
     }
 }

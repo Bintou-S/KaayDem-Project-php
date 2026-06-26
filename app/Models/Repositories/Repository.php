@@ -17,4 +17,5 @@ abstract class Repository
     abstract public function findAll(): array;
     abstract public function save($entity): bool;
     abstract public function delete(int $id): bool;
+    
 }

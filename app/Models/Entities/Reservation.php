@@ -62,4 +62,5 @@ class Reservation
     public function setId(int $id): void { $this->id = $id; }
     public function setDateReservation(\DateTime $date): void { $this->dateReservation = $date; }
     public function setHistorique(array $h): void { $this->historique = $h; }
+    
 }
